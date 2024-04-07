@@ -14,10 +14,14 @@ resource "aws_s3_bucket" "example2" {
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "muratova93"
 }
+# terraform import aws_s3_bucket.my_bucket muratova13
+
 
 resource "aws_s3_bucket" "my_bucket2" {
   bucket = "negrescu01"
 }
+# terraform import aws_s3_bucket.my_bucket2 negrescu01
+
 
 resource "aws_iam_user" "girls" {
   for_each = toset([
@@ -42,3 +46,4 @@ resource "aws_iam_group_membership" "team" {
 
   group = aws_iam_group.honey.name
 }
+
