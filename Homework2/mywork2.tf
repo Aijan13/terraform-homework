@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "example2" {
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "muratova93"
 }
-# terraform import aws_s3_bucket.my_bucket muratova13
+# terraform import aws_s3_bucket.my_bucket muratova93
 
 
 resource "aws_s3_bucket" "my_bucket2" {
