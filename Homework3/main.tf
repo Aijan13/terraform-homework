@@ -40,8 +40,8 @@ resource "aws_instance" "web" {
   availability_zone = each.value
 
 } 
-
-
+#output {
+#   value = aws_instance.web[*].public_ip}
 # variable "availability_zones" {
 #   description = "Availability zones"
 #   type        = list(string)
