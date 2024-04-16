@@ -30,9 +30,9 @@ variable ports {
   type = list(number)
 }
 
-variable "key_name" {
+variable key {
   description = "Provide key name"
-  default = ""
+  default = "bastion-key"
   type = string
 }
 
