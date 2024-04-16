@@ -5,9 +5,10 @@ variable region {
 
 variable vpc_cidr {
  type = list(object({
- cidr_block = string 
+   cidr_block = string 
+   dns_hostnames = bool
+   dns_support = bool
  }))
- description = "Provide vpc cidr block"
 }
 
 variable subnet_cidr {
@@ -28,14 +29,4 @@ variable type {
 variable ports {
   description = "List of ports to allow traffic"
   type        = list(number)
-}
-
-variable enable_dns_support {
-  type = bool
-  description = "Enable DNS support for the VPC"
-}
-
-variable enable_dns_hostnames {
-  type = bool
-  description = "Enable DNS hostnames for the VPC"
 }

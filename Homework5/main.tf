@@ -4,6 +4,8 @@ provider aws {
 
 resource "aws_vpc" "kaizen" {        
   cidr_block = var.vpc_cidr[0].cidr_block
+  enable_dns_support = var.vpc_cidr[0].dns_support
+  enable_dns_hostnames = var.vpc_cidr[0].dns_hostnames
 
 }
 
