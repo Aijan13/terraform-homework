@@ -30,3 +30,12 @@ variable ports {
   description = "List of ports to allow traffic"
   type        = list(number)
 }
+
+variable rt_names {
+ type = list(string)
+ default = [ "public-rt", "private-rt" ]
+
+variable igw_name {
+ type = string
+ default = "homework5_igw"
+

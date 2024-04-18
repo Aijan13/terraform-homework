@@ -54,7 +54,7 @@ resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.kaizen.id
 
   tags = {
-    Name = "homework5_igw"
+    Name = var.igw_name
   }
 }
 
@@ -67,15 +67,14 @@ resource "aws_route_table" "public" {
   }
 
   tags = {
-    Name = "public-rt"
-  }
+    Name = var.rt_names[0]  }
 }
 
 resource "aws_route_table" "private" {
   vpc_id = aws_vpc.kaizen.id
 
   tags = {
-    Name = "private-rt"
+    Name = var.rt_names[1]
   }
 }
 
