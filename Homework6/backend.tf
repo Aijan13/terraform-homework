@@ -3,6 +3,6 @@ terraform {
     bucket = "aijan-bucket"
     key    = "ohio/terraform.tfstate"
     region = "us-east-2"
-    # dynamodb_table = "lock-state"
+    dynamodb_table = "lock-state"
   }
   }
